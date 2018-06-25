@@ -13,7 +13,7 @@ int p(int x){
         a = a + b;
         i = i+1;
     }
-    return a > k-1;
+    return a >= k;
 }
 
 
@@ -28,10 +28,10 @@ int main(){
     while(j < n){
         if(A[j] > l){l = A[j];}
         j = j + 1;
-    }
+    }/*lはA[j]の最大値*/
     
     lb = 0;
-    ub = l;
+    ub = l%k;
     while(ub - lb > 1){
         int m = (lb + ub)/2;
         if(p(m)){
