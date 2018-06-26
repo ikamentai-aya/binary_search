@@ -31,7 +31,7 @@ int main(){
     }/*lはA[j]の最大値*/
     
     lb = 0;
-    ub = l;
+    ub = l+1;
     while(ub - lb > 1){
         int m = (lb + ub)/2;
         if(p(m)){
